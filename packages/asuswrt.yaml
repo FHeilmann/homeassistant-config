@@ -1,0 +1,18 @@
+# AsusWRT
+homeassistant:
+  customize:
+    sensor.asuswrt_download:
+      icon: mdi:download
+    sensor.asuswrt_upload:
+      icon: mdi:upload
+    device_tracker.a020a62fb539:
+      icon: mdi:printer-3d
+
+device_tracker:
+  - platform: asuswrt
+    host: !secret  asuswrt_host
+    username: !secret asuswrt_user
+    password: !secret asuswrt_password 
+    new_device_defaults:
+      track_new_devices: false
+      

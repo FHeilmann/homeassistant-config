@@ -1,0 +1,3 @@
+media_player:
+  - platform: yamaha_musiccast
+    host: !secret yamaha_host    

@@ -1,0 +1,72 @@
+title: Home
+views:
+  - title: Temperature
+    icon: mdi:radiator
+    cards:
+      - type: vertical-stack
+        cards:
+          - type: entities
+            title: Bedroom
+            entities:
+              - climate.neq1489143
+          - type: iframe
+            title: Bedroom Graphs
+            url: http://192.168.1.130:3000/d-solo/9FD5CGgRk/home-assistant?panelId=4&orgId=1&theme=light&from=now-3d&to=now
+    #     - type: history-graph
+    #        title: Bedroom Graphs
+    #        hours_to_show: 168
+    #        refresh_interval: 3600
+    #        entities:
+    #          - entity: sensor.bedroom_valve
+    #            name: Valve State
+    #          - entity: sensor.bedroom_temperature
+    #            name: Temperature
+      - type: vertical-stack
+        cards:
+          - type: entities
+            title: Office
+            entities:
+              - climate.neq1489748
+          - type: iframe
+            title: Office Graphs
+            url: http://192.168.1.130:3000/d-solo/9FD5CGgRk/home-assistant?panelId=6&orgId=1&theme=light&from=now-3d&to=now
+    #      - type: history-graph
+    #        title: Office Graphs
+    #        hours_to_show: 168
+    #        refresh_interval: 3600
+    #        entities:
+    #          - entity: sensor.office_valve
+    #            name: Valve State
+    #          - entity: sensor.office_temperature
+    #            name: Temperature
+      - type: vertical-stack
+        cards:
+          - type: entities
+            title: Living Room
+            entities:
+              - climate.neq1522887
+              - climate.neq1489164
+              - climate.neq1489181
+          - type: iframe
+            title: Living Room Graphs
+            url: http://192.168.1.130:3000/d-solo/9FD5CGgRk/home-assistant?panelId=2&orgId=1&theme=light&from=now-3d&to=now
+    #      - type: history-graph
+    #        title: Living Room Graphs
+    #        hours_to_show: 168
+    #        refresh_interval: 3600
+    #        entities:
+    #          - entity: sensor.living_room_window_valve
+    #            name: Window Valve State
+    #          - entity: sensor.living_room_balcony_valve
+    #            name: Balcony Valve State
+    #          - entity: sensor.neq1522887_humidity
+    #            name: Humidity
+    #          - entity: sensor.neq1522887_temperature
+    #            name: Temperature
+  - title: Administration
+    icon: mdi:wrench
+    cards:
+    - type: entities
+      title: Bedroom
+      entities:
+        - climate.office

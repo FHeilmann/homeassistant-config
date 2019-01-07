@@ -1,0 +1,9 @@
+# Google Assistant
+google_assistant:
+  project_id: !secret googleassist_pid
+  api_key: !secret googleassist_apikey
+  exposed_domains:
+    - climate
+    - switch
+    - light
+    - cover

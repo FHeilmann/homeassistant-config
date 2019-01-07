@@ -1,0 +1,68 @@
+homeassistant:
+  customize:
+    climate.neq1489748:
+      friendly_name: Computerzimmer Thermostat
+      entity_picture: /local/thermostat.jpg
+    climate.neq1489161:
+      friendly_name: Kueche Thermostat
+      entity_picture: /local/thermostat.jpg
+    climate.neq1489169:
+      friendly_name: Bad Thermostat
+      entity_picture: /local/thermostat.jpg
+    climate.neq1489143:
+      friendly_name: Schlafzimmer Thermostat
+      entity_picture: /local/thermostat.jpg
+    climate.neq1489181:
+      friendly_name: Wohnzimmer Balkon Thermostat
+      entity_picture: /local/thermostat.jpg
+    climate.neq1489164:
+      friendly_name: Wohnzimmer Fenster Thermostat
+      entity_picture: /local/thermostat.jpg
+    climate.neq1522870:
+      friendly_name: Flur Wandthermostat
+      entity_picture: /local/wandthermostat.jpg
+    climate.neq1522887:
+      friendly_name: Wohnzimmer Wandthermostat
+      entity_picture: /local/wandthermostat.jpg#
+homematic:
+  interfaces:
+    rf:
+      host: !secret homematic_host
+      port: !secret homematic_port
+      
+sensor:
+  - platform: template
+    sensors:
+      living_room_window_valve:
+        value_template: ' {{states.climate.neq1489164.attributes.valve }}'
+        unit_of_measurement: '%'
+      living_room_window_battery:
+        value_template: ' {{states.climate.neq1489164.attributes.battery }}'
+        unit_of_measurement: 'V'
+      living_room_balcony_valve:
+        value_template: ' {{states.climate.neq1489181.attributes.valve }}'
+        unit_of_measurement: '%'
+      living_room_balcony_battery:
+        value_template: ' {{states.climate.neq1489181.attributes.battery }}'
+        unit_of_measurement: 'V'
+      living_room_wall_battery:
+        value_template: ' {{states.climate.neq1522887.attributes.battery }}'
+        unit_of_measurement: 'V'
+      bedroom_valve:
+        value_template: ' {{states.climate.neq1489143.attributes.valve }}'
+        unit_of_measurement: '%'
+      bedroom_temperature:
+        value_template: ' {{states.climate.neq1489143.attributes.current_temperature }}'
+        unit_of_measurement: '°C'
+      bedroom_battery:
+        value_template: ' {{states.climate.neq1489143.attributes.battery }}'
+        unit_of_measurement: 'V'
+      office_valve:
+        value_template: ' {{states.climate.neq1489748.attributes.valve }}'
+        unit_of_measurement: '%'
+      office_temperature:
+        value_template: ' {{states.climate.neq1489748.attributes.current_temperature }}'
+        unit_of_measurement: '°C'
+      office_battery:
+        value_template: ' {{states.climate.neq1489748.attributes.battery }}'
+        unit_of_measurement: 'V'

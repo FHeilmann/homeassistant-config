@@ -1,0 +1,30 @@
+influxdb:
+  host: !secret influxdb_host
+  username: !secret influxdb_user
+  password: !secret influxdb_pwd
+  include:
+    entities:
+      - climate.neq1489143
+      - climate.neq1489161
+      - climate.neq1489164
+      - climate.neq1489169
+      - climate.neq1489181
+      - climate.neq1489748
+      - climate.neq1522870
+      - climate.neq1522887
+      - sensor.pihole_ads_blocked_today
+      - sensor.pihole_ads_percentage_blocked_today
+      - sensor.pihole_dns_queries_today
+      - sensor.asuswrt_download_speed
+      - sensor.asuswrt_upload_speed
+  component_config:
+    sensor.pihole_ads_blocked_today:
+      override_measurement: 'sensor.pihole_ads_blocked_today'
+    sensor.pihole_ads_percentage_blocked_today:
+      override_measurement: 'sensor.pihole_ads_percentage_blocked_today'
+    sensor.pihole_dns_queries_today:
+      override_measurement: 'sensor.pihole_dns_queries_today'
+    sensor.asuswrt_download_speed:
+      override_measurement: 'sensor.asuswrt_download_speed'
+    sensor.asuswrt_upload_speed:
+      override_measurement: 'sensor.asuswrt_upload_speed'

@@ -1,0 +1,4 @@
+remote:
+  - platform: harmony
+    name: Harmony Wohnzimmer
+    host: !secret harmony_host
