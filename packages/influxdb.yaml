@@ -17,6 +17,9 @@ influxdb:
       - sensor.pihole_dns_queries_today
       - sensor.asuswrt_download_speed
       - sensor.asuswrt_upload_speed
+      - sensor.espurna_washer_power
+      - sensor.espurna_washer_reactive
+      - sensor.espurna_washer_apparent
   component_config:
     sensor.pihole_ads_blocked_today:
       override_measurement: 'sensor.pihole_ads_blocked_today'
@@ -28,3 +31,9 @@ influxdb:
       override_measurement: 'sensor.asuswrt_download_speed'
     sensor.asuswrt_upload_speed:
       override_measurement: 'sensor.asuswrt_upload_speed'
+    sensor.espurna_washer_power:
+      override_measurement: 'sensor.espurna_washer_power'
+    sensor.espurna_washer_reactive:
+      override_measurement: 'sensor.espurna_washer_reactive'
+    sensor.espurna_washer_apparent:
+      override_measurement: 'sensor.espurna_washer_apparent'

@@ -12,6 +12,11 @@ homeassistant:
   time_zone: Europe/Berlin
   # Packages
   packages: !include_dir_named packages
+  
+discovery:
+
+lovelace:
+  mode: yaml
 
 # Enables the frontend
 frontend:
